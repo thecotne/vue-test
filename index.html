@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.12.13/vue.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+	<my-list list="{{ list }}">
+		{{ item.name }}
+		<input type="text" v-model="item.name">
+	</my-list>
+
+	<pre>{{ list | json }}</pre>
+	<pre>{{ item | json }}</pre>
+</div>
+
+
+<script type="x/template" id="my-list">
+
+	<div>
+		<div v-repeat="item in list">
+			<content with-local-scope></content>
+			<content></content>
+		</div>
+	</div>
+</script>
+
+
+<script src="dist/main.bundle.js"></script>
+
+
+</body>
+</html>
