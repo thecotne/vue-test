@@ -1,5 +1,6 @@
 var clone = require('vue/src/parsers/template').clone;
 var content = require('vue/src/element-directives/content');
+var Vue = require('vue');
 
 /**
  * Extract qualified content nodes from a node list.
