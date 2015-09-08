@@ -1,6 +1,5 @@
 var clone = require('vue/src/parsers/template').clone;
 var content = require('vue/src/element-directives/content');
-var R = require('ramda');
 
 /**
  * Extract qualified content nodes from a node list.
